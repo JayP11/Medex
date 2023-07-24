@@ -52,67 +52,69 @@ const OrderTicketView = () => {
       <div className="inq-card-sec">
         <div className="inq-card-con">
           <p className="ticket-viw-head">Tickets</p>
-          {viewticketdata && viewticketdata.length > 0
-            ? viewticketdata.map((item) => {
-                return (
-                  <div className="inq-card-main">
-                    {" "}
-                    <div className="inq-card-imgbox">
-                      <img
-                        // src={
-                        //     item.image_full_path !== "" ? item.image_full_path : images.user
-                        // }
-                        src={
-                          item.image_full_path !== ""
-                            ? item.image_full_path
-                            : images.noimage
-                        }
-                        alt="inquiry Image"
-                        className="inq-card-img"
-                      />
-                    </div>
-                    <div className="inq-card-content">
-                      <div className="field-flex">
-                        <p className="inq-card-txt">Product Name:</p>
-                        <span className="inq-card-txt-inner">
-                          {/* {item.first_name && item.first_name}{" "}
+          <div style={{ marginBottom: "40px" }}>
+            {viewticketdata && viewticketdata.length > 0
+              ? viewticketdata.map((item) => {
+                  return (
+                    <div className="inq-card-main">
+                      {" "}
+                      <div className="inq-card-imgbox">
+                        <img
+                          // src={
+                          //     item.image_full_path !== "" ? item.image_full_path : images.user
+                          // }
+                          src={
+                            item.image_full_path !== ""
+                              ? item.image_full_path
+                              : images.noimage
+                          }
+                          alt="inquiry Image"
+                          className="inq-card-img"
+                        />
+                      </div>
+                      <div className="inq-card-content">
+                        <div className="field-flex">
+                          <p className="inq-card-txt">Product Name:</p>
+                          <span className="inq-card-txt-inner">
+                            {/* {item.first_name && item.first_name}{" "}
                             {item.last_name && item.last_name} */}
-                          {item.product_name === null ||
-                          item.product_name === "undefined" ||
-                          item.product_name === ""
-                            ? ""
-                            : item.product_name}
-                        </span>
+                            {item.product_name === null ||
+                            item.product_name === "undefined" ||
+                            item.product_name === ""
+                              ? ""
+                              : item.product_name}
+                          </span>
+                        </div>
+                        <div className="field-flex">
+                          <p className="inq-card-txt">Subject: </p>
+                          <span className="inq-card-txt-inner">
+                            {/* <span>{item.email && item.email}</span> */}
+                            {item.subject === null ||
+                            item.subject === "undefined" ||
+                            item.subject === ""
+                              ? ""
+                              : item.subject}
+                          </span>
+                        </div>
+                        <div className="field-flex">
+                          <p className="inq-card-txt">Product Description: </p>
+                          <span className="inq-card-txt-inner">
+                            {item.problem_description === null ||
+                            item.problem_description === "undefined" ||
+                            item.problem_description === ""
+                              ? ""
+                              : item.problem_description}
+                          </span>
+                        </div>
                       </div>
-                      <div className="field-flex">
-                        <p className="inq-card-txt">Subject: </p>
-                        <span className="inq-card-txt-inner">
-                          {/* <span>{item.email && item.email}</span> */}
-                          {item.subject === null ||
-                          item.subject === "undefined" ||
-                          item.subject === ""
-                            ? ""
-                            : item.subject}
-                        </span>
-                      </div>
-                      <div className="field-flex">
-                        <p className="inq-card-txt">Product Description: </p>
-                        <span className="inq-card-txt-inner">
-                          {item.problem_description === null ||
-                          item.problem_description === "undefined" ||
-                          item.problem_description === ""
-                            ? ""
-                            : item.problem_description}
-                        </span>
-                      </div>
-                    </div>
-                    {/* <button className="btn-inq-card" onClick={() => deleteInquery()}>
+                      {/* <button className="btn-inq-card" onClick={() => deleteInquery()}>
                             <MdOutlineDeleteOutline className="inq-card-icon" />
                         </button> */}
-                  </div>
-                );
-              })
-            : null}{" "}
+                    </div>
+                  );
+                })
+              : null}{" "}
+          </div>
         </div>
       </div>
     </>

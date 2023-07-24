@@ -231,8 +231,7 @@ const SingleProductPage = (props) => {
                                 seller_name: single_product.sellers.name,
                               },
                             }}
-                            className="sellername_text"
-                          >
+                            className="sellername_text">
                             {single_product.sellers.name}
                           </Link>
                         )}
@@ -261,10 +260,10 @@ const SingleProductPage = (props) => {
                     </p> */}
                   </div>
                 </div>
-                <ul>
+                {/* <ul>
                   <li>hello</li>
                   <li>hello</li>
-                </ul>
+                </ul> */}
                 <div className="singleproduct_qty">
                   <p className="quantity_text">Quantity</p>
                   <div className="quantity_box">
@@ -295,8 +294,7 @@ const SingleProductPage = (props) => {
                               }
                             }
                           }
-                        }}
-                      >
+                        }}>
                         -
                       </button>
                       &nbsp;&nbsp;{qty}&nbsp;&nbsp;
@@ -329,8 +327,7 @@ const SingleProductPage = (props) => {
                             )
                               setQty(qty + offer_qty);
                           }
-                        }}
-                      >
+                        }}>
                         +
                       </button>
                     </p>
@@ -341,8 +338,7 @@ const SingleProductPage = (props) => {
                   <IoLocationSharp className="location_sp" />
                   <input
                     placeholder="Enter pincode"
-                    style={{ paddingLeft: "8px", paddingRight: "8px" }}
-                  ></input>
+                    style={{ paddingLeft: "8px", paddingRight: "8px" }}></input>
                   <button type="submit" className="pincodebtn_sp">
                     Submit
                   </button>
@@ -354,8 +350,7 @@ const SingleProductPage = (props) => {
                   onClick={() => {
                     cartAddValue(single_product);
                   }}
-                  className="singleproduct_addtocard_wrap"
-                >
+                  className="singleproduct_addtocard_wrap">
                   <AiOutlineShoppingCart className="singleproduct_addtocard_logo" />
                   <p className="singleproduct_addtocard_text">+ Add to cart</p>
                 </Link>
@@ -375,15 +370,13 @@ const SingleProductPage = (props) => {
               indicatorColor="primary"
               textColor="primary"
               aria-label="basic tabs example"
-              className="tabex"
-            >
+              className="tabex">
               <Tab
                 label={
                   <span
                     className={
                       value === "1" ? "tab__labal-active" : "tab__labal"
-                    }
-                  >
+                    }>
                     PRODUCT DETAILS
                   </span>
                 }
@@ -394,8 +387,7 @@ const SingleProductPage = (props) => {
                   <span
                     className={
                       value === "2" ? "tab__labal-active" : "tab__labal"
-                    }
-                  >
+                    }>
                     OTHER SELLERS
                   </span>
                 }
@@ -416,8 +408,7 @@ const SingleProductPage = (props) => {
                         manu_id: single_product.manufactures.id,
                         manu_name: single_product.manufactures.manufacture_name,
                       },
-                    }}
-                  >
+                    }}>
                     <div className="singlelogo_wrapper">
                       <div className="singlelogo_wrapper_logobox">
                         <FaBuilding className="singlelogo_wrapper_logo" />
@@ -425,14 +416,12 @@ const SingleProductPage = (props) => {
                       <div className="singlelogo_wrapper_text">
                         <p
                           className="singlelogo_wrapper_name"
-                          style={{ color: "#1864ab" }}
-                        >
+                          style={{ color: "#1864ab" }}>
                           Manufacture
                         </p>
                         <p
                           className="singlelogo_wrapper_dis"
-                          style={{ color: "#1971c2", fontWeight: 500 }}
-                        >
+                          style={{ color: "#1971c2", fontWeight: 500 }}>
                           {single_product.manufacture}
                         </p>
                       </div>

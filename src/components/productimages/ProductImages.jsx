@@ -1,54 +1,51 @@
-import React, { useEffect, useState } from 'react'
-import "./ProductImages.css"
+import React, { useEffect, useState } from "react";
+import "./ProductImages.css";
 import styled from "styled-components";
 
-
 const ProductImages = ({ images = [{ url: "" }] }) => {
+  const [main, setMain] = useState(images[0]);
+  const [getMain, setMani] = useState(main.url);
 
-    const [main, setMain] = useState(images[0]);
-    const [getMain, setMani] = useState(main.url);
+  useEffect(() => {
+    setMani(main.url);
+    console.log("getMain", getMain);
+  }, [main]);
 
-
-    useEffect(() => {
-        setMani(main.url);
-        console.log("getMain", getMain);
-    }, [main]);
-
-    return (
-        <Wrapper>
-            <div className="gallery">
-                {images.map((image, index) => {
-                    return (
-                        <img
-                            src={image.url}
-                            alt={image.filename}
-                            key={index}
-                            onClick={() => setMain(images[index])}
-                            className={`${image.url == main.url ? "active" : null}`}
-                        />
-                    );
-                })}
-            </div>
-            {/* <div className="sing-main-img-flex"> */}
-            {console.log("main url is", main.url)}
-            <img src={main.url} alt="main image" className="main-image" />
-            {/* <SideBySideMagnifier
+  return (
+    <Wrapper>
+      <div className="gallery">
+        {images.map((image, index) => {
+          return (
+            <img
+              src={image.url}
+              alt={image.filename}
+              key={index}
+              onClick={() => setMain(images[index])}
+              className={`${image.url == main.url ? "active" : null}`}
+            />
+          );
+        })}
+      </div>
+      {/* <div className="sing-main-img-flex"> */}
+      {console.log("main url is", main.url)}
+      <img src={main.url} alt="main image" className="main-image" />
+      {/* <SideBySideMagnifier
                 alwaysInPlace={true}
                 imageSrc={main.url}
                 interactionSettings={{ tapDurationInMs: 300 }}
                 className="main-image"
             /> */}
 
-            {/* <div className="similar-prod-img-box">  
+      {/* <div className="similar-prod-img-box">  
           <h5>Similar Products</h5>
           <div className="similar-img-box">
             <img src={main.url} alt="similar images" className="similar-img" />
           </div>
         </div>
       </div> */}
-        </Wrapper>
-    )
-}
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   display: flex;
@@ -78,7 +75,7 @@ const Wrapper = styled.section`
     max-height: 670px;
     overflow-y: scroll;
     padding: 5px 20px 0 5px;
-    margin-right:1rem;
+    margin-right: 1rem;
     ::-webkit-scrollbar {
       width: 5px;
     }
@@ -98,7 +95,12 @@ const Wrapper = styled.section`
       width: 90px;
       cursor: pointer;
       margin-bottom: 20px;
-      object-fit: contain;
+
+      /* border: solid #0c8599 2px; */
+      object-fit: cover;
+    }
+    img:hover {
+      border: solid #0c8599 2px;
     }
   }
   .active {
@@ -126,8 +128,6 @@ const Wrapper = styled.section`
     }
   }
 
-  
-  
   @media screen and (max-width: 1400px) {
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -144,8 +144,9 @@ const Wrapper = styled.section`
       overflow-x: scroll !important;
       max-height: unset;
       max-width: 100%;
+
       img {
-        height: 150px !important;
+        height: 95px !important;
         margin: 10px;
       }
     }
@@ -188,9 +189,7 @@ const Wrapper = styled.section`
     .main-image {
       height: 300px;
     }
-
-
   }
 `;
 
-export default ProductImages
+export default ProductImages;

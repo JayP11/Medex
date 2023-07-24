@@ -149,8 +149,7 @@ const TicketDetails = ({ ticket_modal, setTicket_modal, mainid }) => {
                       ) : (
                         <div
                           style={{ width: "100%" }}
-                          {...getRootProps({ className: "dropzone" })}
-                        >
+                          {...getRootProps({ className: "dropzone" })}>
                           <div className="myprofile_inner_sec2_img_upload">
                             <AiOutlineCloudUpload
                               style={{
@@ -171,8 +170,7 @@ const TicketDetails = ({ ticket_modal, setTicket_modal, mainid }) => {
                             <button
                               type="button"
                               className="click_upload_btn"
-                              style={{ background: "none", border: "none" }}
-                            >
+                              style={{ background: "none", border: "none" }}>
                               clicking here
                             </button>
                             {/* <a href="">clicking here</a> */}
@@ -184,8 +182,7 @@ const TicketDetails = ({ ticket_modal, setTicket_modal, mainid }) => {
                               style={{ marginBottom: "10px" }}
                               onClick={() => {
                                 // setFiles([]);
-                              }}
-                            >
+                              }}>
                               Upload File
                             </button>
                           </div>
@@ -194,8 +191,7 @@ const TicketDetails = ({ ticket_modal, setTicket_modal, mainid }) => {
                       {/* <div className="myprofile_upload_img_btn_wrapp"> */}
                       <button
                         className="btn btn-blue"
-                        onClick={() => setFiles([])}
-                      >
+                        onClick={() => setFiles([])}>
                         Cancel
                       </button>
                       {/* </div> */}
@@ -205,8 +201,7 @@ const TicketDetails = ({ ticket_modal, setTicket_modal, mainid }) => {
                   <button
                     className="tic_btn"
                     type="submit"
-                    onClick={() => TicketApi()}
-                  >
+                    onClick={() => TicketApi()}>
                     Submit
                   </button>
                 </div>

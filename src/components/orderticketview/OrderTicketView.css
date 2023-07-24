@@ -19,6 +19,8 @@
 .inq-card-con {
   max-width: 1140px;
   margin: 0 auto;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .inq-card-imgbox {
