@@ -201,7 +201,7 @@ const SingleProductPage = (props) => {
                 </div>
 
                 <p style={{ color: "red", marginTop: "-10px" }}>
-                  *Excludin GST
+                  *Excluding GST
                 </p>
 
                 <div className="delivered">
