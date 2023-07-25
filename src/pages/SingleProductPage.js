@@ -613,7 +613,7 @@ const SingleProductPage = (props) => {
                       );
                     })
                   ) : (
-                    <p>Sorry, no other sellers found.</p>
+                    <p style={{fontWeight:"bold" ,fontSize:"17px"}}>Sorry, no other sellers found.</p>
                   )}
                 </div>
               ) : null}

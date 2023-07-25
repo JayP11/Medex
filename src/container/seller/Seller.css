@@ -60,6 +60,7 @@
 }
 
 .seller_product_wrap {
+  width: 640px;
   display: flex;
   flex-wrap: wrap;
   flex: 4;
@@ -68,11 +69,12 @@
   align-items: center;
   justify-content: center;
 
-  border: 2px solid #99e9f2;
-  border-radius: 10px;
+  border: 1px solid #25ced1;
+  /* border-radius: 10px; */
 
   gap: 2%;
   padding: 2%;
+  margin-bottom: 25px;
 }
 
 .seller_salles_wrap {

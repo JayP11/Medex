@@ -167,9 +167,10 @@ const Wrapper = styled.section`
     }
   }
 
-  @media screen and (max-width: 2560px) {
+  @media screen and (max-width: 1250px) {
     .main-image {
-      /* height: 830px; */
+      height: 350px; 
+    width:350px;
     }
   }
 
