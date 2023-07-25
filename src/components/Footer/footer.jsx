@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer-logo-padding">
           <a
             class="menu-link btn-contact"
-            href="//api.whatsapp.com/send?phone=91988388743&text=Let's Get in Touch"
+            href="//api.whatsapp.com/send?phone=+919099040407&text=Let's Get in Touch"
             target="_blank"
           >
             <div>
@@ -31,8 +31,8 @@ const Footer = () => {
           <a
             class="menu-link btn-contact"
             // href="//api.whatsapp.com/send?phone=91988388743&text=Let's Get in Touch"
-            target="_blank"
-          >
+            href="mailto:applified@gmail.com"
+            target="_blank">
             <div>
               <img className="float_wapp2" src={images.gmail}></img>
             </div>
