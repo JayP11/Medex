@@ -91,7 +91,8 @@
 }
 
 .sellername_text {
-  color: blue;
+  text-transform: capitalize;
+   color: blue;
   /* background: #0077b6; */
   font-size: 16px;
   font-weight: 500;
@@ -103,12 +104,12 @@
 }
 
 .sellername_text:hover {
-  color: #0077b6;
-  background: #fff;
+   color: #25ced1;
+  /* background: #fff;
   box-shadow: inset 0 -2px 0 #0077b6;
   border-style: none;
   width: 1px;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; */
 }
 
 .brand_text {
