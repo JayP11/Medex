@@ -97,13 +97,15 @@ const Dashboard = () => {
                     <div className="first_col">
                       <lable className="acc_lable">
                         Name :{" "}
-                        <lable className="acc_lable_val">
-                          {logindata.name}
+                         <lable className="acc_lable_val">
+                          {logindata.company_name}
                         </lable>
-                      </lable>
+                        {/* <lable className="acc_lable_val">
+                          {logindata.name}/
+                        </lable> */}
+                      </lable>&nbsp;
                       <lable className="acc_lable">
-                        {" "}
-                        firstname :{" "}
+                        Firstname :  {" "}
                         <lable className="acc_lable_val">
                           {logindata.first_name}
                         </lable>

@@ -20,6 +20,9 @@ import ContactUs from "./pages/ContactUs";
 import Wishlist from "./container/wishlist";
 import Ticket from "./container/Ticket";
 import OrderTicketView from "./components/orderticketview/OrderTicketView";
+import NonListedProduct from "./pages/non_listed_product/NonListedProduct";
+import MyWallet from "./pages/my_wallet/MyWallet";
+import OrderHistory from "./pages/order_history/OrderHistory";
 // import { Footer, Navbar } from './components';
 // import { Banner, LearnMore, Popular, Products, Testimonials } from './container';
 
@@ -54,6 +57,9 @@ const App = () => (
         <Route exact path="/Wishlist" component={Wishlist}></Route>
         <Route exact path="/Ticket" component={Ticket}></Route>
         <Route exact path="/ticketdetails" component={OrderTicketView}></Route>
+        <Route exact path="/NonListedProduct" component={NonListedProduct}></Route>
+        <Route exact path="/MyWallet" component={MyWallet}></Route>
+        <Route exact path="/OrderHistory" component={OrderHistory}></Route>
       </Switch>
       <Footer />
     </Router>

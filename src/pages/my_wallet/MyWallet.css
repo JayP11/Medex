@@ -1,0 +1,30 @@
+.db_title1 {
+  width: 100%;
+  height: 150px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #227077;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+.mywallet_main {
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .mywallet_main {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 435px) {
+  .mywallet_main {
+    margin: 0rem;
+  }
+}

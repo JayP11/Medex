@@ -146,7 +146,7 @@ const CheckOutPage = () => {
     <>
       <main className="checkout_wrapper">
         <div class="contact_info">
-          <p className="contact_title">Select Delivery Address</p>
+          <p className="contact_title"> Delivery Address</p>
           {/* <button class="add_address" onClick={() => setNewAddress(true)}>
             <MdAddCircle className="add_new_btn" />
             <p>Add New Delivery Address</p>

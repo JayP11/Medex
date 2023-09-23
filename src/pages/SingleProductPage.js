@@ -162,7 +162,7 @@ const SingleProductPage = (props) => {
 
           <div className="productpage_dis_side_wrapper">
             <div className="sellername_wrap">
-              {single_product.category.slice(1, 2).map((item, index) => {
+              {single_product.category.slice(0, 1).map((item, index) => {
                 return <p className="brand_text">{item}</p>;
               })}
             </div>
@@ -237,15 +237,15 @@ const SingleProductPage = (props) => {
                         )}
                       </div>
                     </div>
-                    <div className="return-time-sec-flex">
-                      {/* <img
+                    {/* <div className="return-time-sec-flex">
+                      <img
                         src={images.return_exchange}
                         alt=""
                         className="rtn_exchange"
-                      /> */}
+                      />
                       <TbTruckReturn className="rtn_exchange" />
                       <b>7 Days Return or Replacement.</b>
-                    </div>
+                    </div> */}
                   </div>
                   {/* <div>
                     <img
@@ -498,9 +498,12 @@ const SingleProductPage = (props) => {
                       <p className="singlelogo_wrapper_name">
                         Product Category
                       </p>
-                      {single_product.category.map((item, index) => {
+                      {/* {single_product.category.map((item, index) => {
                         return <p className="singlelogo_wrapper_dis">{item}</p>;
-                      })}
+                      })} */}
+                      {single_product.category.slice(1, 2).map((item, index) => {
+                return <p className="singlelogo_wrapper_dis">{item}</p>;
+              })}
                       {/* <p className="singlelogo_wrapper_dis">Others</p> */}
                     </div>
                   </div>

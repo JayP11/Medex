@@ -196,6 +196,7 @@
 
 .pincode_status {
   gap: 8px;
+  align-items: center;
   display: flex;
 }
 

@@ -153,7 +153,6 @@ import { accept_header, add_wishlist_url } from "../../Utils/constatns";
 import axios from "axios";
 
 const ProductCard = (props) => {
-
   const [wishlistcalling1, setWishlistcalling1] = useState(1);
   const [loading, SetLoading] = useState(1);
 
@@ -161,23 +160,18 @@ const ProductCard = (props) => {
 
   useEffect(() => {
     console.log("user id is", user_id);
-  }, [])
-
+  }, []);
 
   // Add wishlist api
 
   const addWishlist = (productid) => {
-
     SetLoading(true);
     let userid = localStorage.getItem("token");
     console.log("token is", userid);
 
-
     const formdata = new FormData();
     formdata.append("product_id", productid);
     formdata.append("calling", wishlistcalling1);
-
-
 
     console.log("add wishlist formdata is", formdata);
 
@@ -202,8 +196,7 @@ const ProductCard = (props) => {
         console.log("err", err);
         SetLoading(false);
       });
-
-  }
+  };
 
   const product = props.product;
   const { addToCartItem, cart } = useCartContext();
@@ -281,7 +274,7 @@ const ProductCard = (props) => {
 
   useEffect(() => {
     console.log("product is", product);
-  }, [])
+  }, []);
 
   return (
     // <div>
@@ -318,6 +311,39 @@ const ProductCard = (props) => {
                 <labal style={{ color: "#e8590c" }}>By:</labal>{" "}
                 {product.manufacture}
               </span>
+              {/* 
+              
+              <Link
+                            to={{
+                              pathname: "/sellers",
+                              state: {
+                                seller_id: single_product.sellers.id,
+                                seller_name: single_product.sellers.name,
+                              },
+                            }}
+                            className="sellername_text">
+                            {single_product.sellers.name}
+                          </Link>
+               */}
+              <span
+                className="product-catagory"
+                style={{ textTransform: "capitalize" }}
+              >
+                <labal style={{ color: "#e8590c" }}>Sold by:</labal>{" "}
+                <Link
+                  to={{
+                    pathname: "/sellers",
+                    state: {
+                      seller_id: product.sellers.id,
+                      seller_name: product.sellers.name,
+                    },
+                  }}
+                  className="sellername_text"
+                  style={{fontSize:"12px",padding:"0px" ,color:"#a75050"}}
+                >
+                  {product.sellers.name}
+                </Link>
+              </span>
               <div className="product-bottom-details">
                 <div className="product-price">
                   &#x20B9;{product.price}&nbsp;
@@ -326,16 +352,26 @@ const ProductCard = (props) => {
                 <div className="product-links">
                   <Link to={{ pathname: "/Wishlist" }}>
                     {/* <i className="fa fa-heart"></i> */}
-                    {user_id === "" ? null : <>{product.is_wishlist === true ? <AiFillHeart size="20px" /> : <AiOutlineHeart size="20px" onClick={() => addWishlist(product.id)} />}
-                    </>}
-
+                    {user_id === "" ? null : (
+                      <>
+                        {product.is_wishlist === true ? (
+                          <AiFillHeart size="20px" />
+                        ) : (
+                          <AiOutlineHeart
+                            size="20px"
+                            onClick={() => addWishlist(product.id)}
+                          />
+                        )}
+                      </>
+                    )}
                   </Link>
                   <Link
                     to={{ pathname: "/cart" }}
                     style={{ width: "100px" }}
                     onClick={() => {
                       cartAddValue(product);
-                    }}>
+                    }}
+                  >
                     <i className="fa fa-shopping-cart"></i>
                   </Link>
                 </div>

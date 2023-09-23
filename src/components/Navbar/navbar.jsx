@@ -195,14 +195,14 @@ const Navbar = (props) => {
 
             <div class="dropdown-content">
               <Link to="/Dashboard">Profile</Link>
-              <Link to="/Dashboard">My Wallet</Link>
-              <Link to="./Dashboard">Order history</Link>
+              <Link to="/MyWallet">My Wallet</Link>
+              <Link to="./OrderHistory">Order history</Link>
               <Link to="/">My account</Link>
               <Link to="/Wishlist">Wishlist</Link>
               <Link to="/">Notifications</Link>
               <a href="./TicketDetails">Ticket Details</a>
               {/* <a href="#">Logout</a> */}
-              <a href="#">
+              <a href="./NonListedProduct">
                 Request a non listed <br /> product
               </a>
             </div>
