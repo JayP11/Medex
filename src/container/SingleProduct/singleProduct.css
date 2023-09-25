@@ -513,7 +513,7 @@
 
   .sellername_text {
     width: auto;
-    margin: 1rem 3rem;
+    /* margin: 1rem 3rem; */
   }
 
   .singleproduct_company_circle {

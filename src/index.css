@@ -144,6 +144,10 @@ link {
   width: 316px;
 }
 
+.ant-notification-notice{
+  font-weight: bolder;
+}
+
 /* .line_wishlist {
   min-width: 100%;
   height: 1px;

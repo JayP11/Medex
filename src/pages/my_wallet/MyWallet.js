@@ -23,6 +23,13 @@ const MyWallet = () => {
         {/* <div className="metadata_lbl">My Wallet</div>
               <div className="metadata_divider"></div> */}
 
+              <div className="db_title">
+            {/* <p>Dashboard</p> */}
+            <lable className="acc_lable">
+              Name :{" "}
+              <lable className="acc_lable_val">{logindata.company_name}</lable>
+            </lable>
+          </div>
         <span>
           <div className="wallet_card">
             <div>

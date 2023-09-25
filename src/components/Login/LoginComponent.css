@@ -203,3 +203,11 @@
 .pass_input {
   position: relative;
 }
+
+@media screen and (max-width:460px) {
+  .login-button button{
+    padding: 0px;
+    width: 11rem;
+    max-width: 100%;
+  }
+}

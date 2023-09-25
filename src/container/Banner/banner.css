@@ -264,7 +264,7 @@ ul li ul li {
   .nav_links_section {
     align-items: center;
     justify-content: center;
-    margin: 12px;
+    /* margin: 12px; */
     padding: 12px;
     flex-direction: column;
     gap: 10px;
@@ -303,7 +303,7 @@ ul li ul li {
   }
 
   .search-box {
-    width: 32%;
+    width: 38%;
   }
 }
 

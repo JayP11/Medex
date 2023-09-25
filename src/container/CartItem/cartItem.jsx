@@ -360,9 +360,7 @@ const CartItem = (props) => {
                       <p>Tax and shipping cost will be calculated later</p>
                     </div>
                   </div>
-                  {/* <Link to={{ pathname: "/" }}>
-                    <p className="back_to_shop">Back To Shopping</p>
-                  </Link> */}
+                 
                   {isLogin ? (
                     <Link
                       className="check_out_btn"
@@ -376,15 +374,18 @@ const CartItem = (props) => {
                       Check-out
                     </Link>
                   )}
+                  <Link to={{ pathname: "/" }}>
+                    <p className="back_to_shop">Back To Shopping</p>
+                  </Link>
                 </div>
               );
             })
           : null}
-        <div className="back_to_shop_section">
+        {/* <div className="back_to_shop_section">
           <Link to={{ pathname: "/" }}>
             <p className="back_to_shop">Back To Shopping</p>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <LoginComponent showscreen={showscreen} setShowlogin={setShowlogin} />

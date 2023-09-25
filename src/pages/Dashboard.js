@@ -83,8 +83,15 @@ const Dashboard = () => {
     <>
       {isLogin ? (
         <div className="dashboard_wrapper">
-          <div className="db_title">
+          <div className="db_title1">
             <p>Dashboard</p>
+          </div>
+          <div className="db_title">
+            {/* <p>Dashboard</p> */}
+            <lable className="acc_lable">
+              Name :{" "}
+              <lable className="acc_lable_val">{logindata.company_name}</lable>
+            </lable>
           </div>
           <div className="db_wrapper">
             <div className="db_profile">
@@ -97,15 +104,16 @@ const Dashboard = () => {
                     <div className="first_col">
                       <lable className="acc_lable">
                         Name :{" "}
-                         <lable className="acc_lable_val">
+                        <lable className="acc_lable_val">
                           {logindata.company_name}
                         </lable>
                         {/* <lable className="acc_lable_val">
                           {logindata.name}/
                         </lable> */}
-                      </lable>&nbsp;
+                      </lable>
+                      &nbsp;
                       <lable className="acc_lable">
-                        Firstname :  {" "}
+                        Firstname :{" "}
                         <lable className="acc_lable_val">
                           {logindata.first_name}
                         </lable>
@@ -293,7 +301,8 @@ const Dashboard = () => {
                         className="tandc"
                         to={{
                           pathname: `/TermsConditions`,
-                        }}>
+                        }}
+                      >
                         Terms and Conditions
                       </Link>
                     </div>
@@ -399,7 +408,8 @@ const Dashboard = () => {
                                   setTicket_modal(true);
                                   getSingleOrderDetails(item.id, logintoken);
                                   setId(item.id);
-                                }}>
+                                }}
+                              >
                                 <IoTicket className="ticket_details_btn" />
                               </button>
 
@@ -408,7 +418,8 @@ const Dashboard = () => {
                                 onClick={() => {
                                   setOrder_modal(true);
                                   getSingleOrderDetails(item.id, logintoken);
-                                }}>
+                                }}
+                              >
                                 <FaFileAlt className="action_view_btn" />
                               </button>
 
@@ -416,15 +427,34 @@ const Dashboard = () => {
                                 href="javasript:void(0);"
                                 title="Download Invoice"
                                 className="action_val_btn"
-                                onClick={() => mDownloadInvoice(item.id)}>
+                                onClick={() => mDownloadInvoice(item.id)}
+                              >
                                 <MdDownloadForOffline className="action_download_btn" />
                               </a>
-                              {item.order_status_id == "1" ? (
+                              {/* {item.order_status_id == "1" ? (
                                 <button
                                   onClick={() => {
                                     cancel_Order(item.id);
                                   }}
-                                  className="action_val_btn">
+                                  className="action_val_btn"
+                                >
+                                  <MdCancel className="action_cancel_btn" />
+                                </button>
+                              ) : null} */}
+                              {item.order_status_id == "1" ? (
+                                <button
+                                  onClick={() => {
+                                    if (
+                                      confirm(
+                                        "Are you sure you want to cancel order?"
+                                      )
+                                    ) {
+                                      cancel_Order(item.id);
+                                    } else {
+                                    }
+                                  }}
+                                  className="action_val_btn"
+                                >
                                   <MdCancel className="action_cancel_btn" />
                                 </button>
                               ) : null}

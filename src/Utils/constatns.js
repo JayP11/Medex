@@ -36,3 +36,4 @@ export const wallet_url = BaseUrl + "wallet";
 export const cancel_order = BaseUrl + "cancel-order";
 export const order_ticket = BaseUrl + "order-ticket";
 export const order_ticket_view = BaseUrl + "order-ticket-view";
+export const create_nonlisted = BaseUrl + "create-nonlisted";

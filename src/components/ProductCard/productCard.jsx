@@ -339,7 +339,7 @@ const ProductCard = (props) => {
                     },
                   }}
                   className="sellername_text"
-                  style={{fontSize:"12px",padding:"0px" ,color:"#a75050"}}
+                  style={{ fontSize: "12px", padding: "0px", color: "#a75050" }}
                 >
                   {product.sellers.name}
                 </Link>
@@ -366,8 +366,8 @@ const ProductCard = (props) => {
                     )}
                   </Link>
                   <Link
-                    to={{ pathname: "/cart" }}
-                    style={{ width: "100px" }}
+                    className="fa_btn"
+                    to={{ pathname: "/" }}
                     onClick={() => {
                       cartAddValue(product);
                     }}

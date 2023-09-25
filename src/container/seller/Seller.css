@@ -111,8 +111,20 @@
   padding: 5%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 690px) {
+  .seller_product_wrap {
+   width: 100%;
+  }
+}
+
+@media (max-width: 490px) {
+  .seller_product_wrap{
+    padding: 0px;
+  }
   .seller_headind_wrap {
     margin-top: 65px;
+  }
+  .product-card{
+    width: 100%;
   }
 }

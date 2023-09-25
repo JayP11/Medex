@@ -9,6 +9,7 @@ import {
   MdDownloadForOffline,
 } from "react-icons/md";
 import { MdAddCircle, MdCancel } from "react-icons/md";
+import { useUserContext } from "../../context/user_context";
 
 const OrderHistory = () => {
   const {
@@ -21,12 +22,29 @@ const OrderHistory = () => {
     getSingleOrderDetails,
     cancelOrder,
   } = useOrderContext();
+  const {
+    logintoken,
+    isLogin,
+    logindata,
+
+    getUserDetails,
+    wallet_data,
+    getWallet,
+  } = useUserContext();
+
   return (
     <div>
       <div className="db_title1">
         <p>My Orders</p>
       </div>
       <div className="db_orders orderhistorymain">
+      <div className="db_title">
+            {/* <p>Dashboard</p> */}
+            <lable className="acc_lable">
+              Name :{" "}
+              <lable className="acc_lable_val">{logindata.company_name}</lable>
+            </lable>
+          </div>
         {/* <div className="metadata_lbl">My Orders</div>
               <div className="metadata_divider"></div> */}
 
